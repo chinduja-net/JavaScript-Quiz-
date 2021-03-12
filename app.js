@@ -3,28 +3,33 @@ const scoreArray = [false, false, false, false, false];
 
 let scoreElement = document.querySelector("#score");
 const message = document.querySelector(".message");
-const button = document.querySelector(".btn")
+const button = document.querySelector(".btn");
+
+// function registerClick(question, answer) {
+//   scoreArray[question - 1] = answer === correct[question - 1] ? true : false;
+// }
 
 function registerClick(question, answer) {
-  scoreArray[question - 1] = answer === correct[question - 1] ? true : false;
+    if (answer === correct[question - 1]) {
+        scoreArray[question - 1] = true;
+    } else {
+        scoreArray[question - 1] = false;
+    }
 }
 
-
-  button.addEventListener("click", function calculateScore() {
+button.addEventListener("click", function calculateScore() {
     let score = 0;
     scoreArray.forEach((item) => {
-      if (item === true) score++;
+        if (item === true) score++;
     });
 
     scoreElement.innerText = `Score: ${score}`;
     if (score === 5) {
-      message.textContent = `Yay! You Scored 5/5 🎉🎉`;
-      document.body.style.backgroundColor = "#d87093";
+        message.textContent = `Yay! You Scored 5/5 🎉🎉`;
+        document.body.style.backgroundColor = "#d87093";
     } else if (score >= 3) {
-      message.textContent = `You are an average 😀😀`;
+        message.textContent = `You are an average 😀😀`;
     } else {
-      message.textContent = `You are not good at anything 🤡🤡`;
+        message.textContent = `You are not good at anything 🤡🤡`;
     }
-  });
-
-
+});
