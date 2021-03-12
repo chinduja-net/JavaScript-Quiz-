@@ -1,0 +1,119 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>The Quizzest Quiz</h1>
+    <div class="wrapper">
+    <div class="container">
+        <section class="question-box">
+            <h2>1.What is the capital of Bahrain?.</h2>
+            <div class="option-container">
+                <div class="answer">
+                    <input type="radio" name="question1"  class="radio" onClick="registerClick(1, 'Answer1')">
+                    <label for="answer1">Manama</label>
+                </div>
+                <div class="answer">
+                    <input type="radio" name="question1" class="radio" onClick="registerClick(1, 'Option 2')">
+                    <label for="answer2">Tripoli</label>
+                </div>
+                <div class="answer">
+                    <input type="radio" name="question1" class="radio" onClick="registerClick(1, 'Option 3')">
+                    <label for="answer3">Yaoundé</label>
+                </div>
+            </div>    
+        </section>
+        
+            <section class="question-box">
+                <h2>2.How do you create a function in JavaScript?</h2>
+                <div class="option-container">
+                    <div class="answer">
+                        <input type="radio" name="question2" id="answer1" onClick="registerClick(2, 'Answer2')">
+                        <label for="answer1">function = myfunction()</label>
+                    </div>
+                    <div class="answer">
+                        <input type="radio" name="question2" id="answer2" onClick="registerClick(2, 'option 2')">
+                        <label for="answer2"> functionmyfunction()</label>
+                    </div>
+                    <div class="answer">
+                        <input type="radio" name="question2" id="answer3" onClick="registerClick(2, 'option 3')">
+                        <label for="answer3"> function:myFunction()</label>
+                    </div>
+                </div>    
+            </section>
+
+            
+                <section class="question-box">
+                    <h2>3.What goes up but never ever comes down?</h2>
+                    <div class="option-container">
+                        <div class="answer">
+                            <input type="radio" name="question3" id="answer1" onClick="registerClick(3, 'option 1')">
+                            <label for="answer1">The Sun</label>
+                        </div>
+                        <div class="answer">
+                            <input type="radio" name="question3" id="answer2" onClick="registerClick(3, 'Answer3')">
+                            <label for="answer2">Your Age</label>
+                        </div>
+                        <div class="answer">
+                            <input type="radio" name="question3" id="answer3" onClick="registerClick(3, 'option 3')">
+                            <label for="answer3">A Yoyo</label>
+                        </div>
+                    </div>    
+                    
+                </section>
+                
+                    <section class="question-box">
+                        <h2>4.What is the Italian word for "pie"?</h2>
+                        <div class="option-container">
+                            <div class="answer">
+                                <input type="radio" name="question4" id="answer1" onClick="registerClick(4, 'option 1')">
+                                <label for="answer1"> Pinta</label>
+                            </div>
+                            <div class="answer">
+                                <input type="radio" name="question4" id="answer2" onClick="registerClick(4, 'option 2')">
+                                <label for="answer2"> Piazza</label>
+                            </div>
+                            <div class="answer">
+                                <input type="radio" name="question4" id="answer3" onClick="registerClick(4, 'Answer4')">
+                                <label for="answer2"> Pizza</label>
+                        </div>    
+                        
+                    </section>
+                    
+                        <section class="question-box">
+                            <h2>5.How Many UNESCO World Heritage Sites are there in Sweden?</h2>
+                            <div class="option-container">
+                                <div class="answer">
+                                    <input type="radio" name="question5" id="answer1" onClick="registerClick(5, 'option 1')">
+                                    <label for="answer1">10</label>
+                                </div>
+                                <div class="answer">
+                                    <input type="radio" name="question5" id="answer2" onClick="registerClick(5, 'Answer5')">
+                                    <label for="answer2"> 15 </label>
+                                </div>
+                                <div class="answer">
+                                    <input type="radio" name="question5" id="answer3" onClick="registerClick(5, 'option 3')">
+                                    <label for="answer3"> 25 </label>
+                                </div>
+                            </div>      
+                        </section>
+                        
+    </div>
+    <div class="result">
+        <button type="submit" class="btn" > Submit</button>
+                        <p id="score">SCORE: 0</p>
+                        <p class="message"></p>
+    </div>
+</div>
+
+    <script src="app.js"></script>
+</body>
+</html>
+
+<!-- onclick="calculateScore()" -->
