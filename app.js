@@ -20,7 +20,9 @@ function registerClick(question, answer) {
 button.addEventListener("click", function calculateScore() {
     let score = 0;
     scoreArray.forEach((item) => {
-        if (item === true) score++;
+        if (item === true) {
+            score++;
+        }
     });
 
     scoreElement.innerText = `Score: ${score}`;
